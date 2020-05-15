@@ -1,0 +1,146 @@
+html{
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: white;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+/* paragraphs on pages layout */
+.paragraphSetup{
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr minmax(500px, 4fr) 1fr;
+    padding-bottom: 50px;
+}
+p{
+    grid-column: 2/-2;
+}
+
+/* header layout */
+.pageHeader{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 30px;
+    text-align: center;
+}
+.headerLogo{
+   font-size: 40px; 
+   font-weight: bold;
+}
+.headerNav{
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* index page article items */
+
+.articleGallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 0px 20px 20px 20px;
+}
+
+/* text with image layout */
+.textWithImage{
+    display: grid;
+}
+
+.imageUnderText{
+    justify-self: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.imageTextBlock{
+    position: absolute;
+    background-color: #ffffff;
+    width: auto;
+    color: black;
+    left:6%;
+    bottom:6%;
+}
+
+/* gallery layout */
+.singlePageGallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 400px;
+    grid-auto-flow: dense;
+    padding: 0px 10px 0px 10px;
+}
+
+.galleryItem{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.galleryHeaderPic{
+    grid-column: 1/-1;
+    grid-row: span 2;
+}
+
+.galleryVertPic{
+    grid-row: span 2;
+}
+
+/* media query to handle broswer/mobile sizing */
+@media (max-width: 1200px){
+    .singlePageGallery{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 400px;
+    }
+}
+@media (max-width: 800px){
+    .singlePageGallery{
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+    }
+}
+
+/* contact layout */
+
+.contactGallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-gap: 20px;
+    padding: 0px 20px 20px 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 0px 10px 10px 10px;
+}
