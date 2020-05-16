@@ -101,8 +101,6 @@ p{
     color: black;
     left:6%;
     bottom:6%;
-    max-width: 350px;
-    width: 80%;
 }
 
 /* gallery layout */
@@ -173,6 +171,11 @@ footer{
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 400px;
     }
+    .imageTextBlock{
+        max-width: 350px;
+        width: 80%;
+        text-align: center;
+    }
 }
 @media (max-width: 800px){
     .singlePageGallery{
@@ -181,5 +184,10 @@ footer{
     }
     .articleGallery{
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1120px){
+    .imageUnderText{
+        margin: 10px;
     }
 }
