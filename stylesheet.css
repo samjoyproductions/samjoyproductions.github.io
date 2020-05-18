@@ -85,7 +85,6 @@ p{
 }
 
 .imageUnderText:hover{
-    /* outline: red 2px solid; */
     transform: translateY(-3px);
     box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
 }
@@ -117,6 +116,12 @@ p{
     display: grid;
     justify-items: center;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.galleryItem:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
 }
 
 .galleryHeaderPic{
@@ -140,6 +145,31 @@ p{
     align-items: center;
     justify-items: center;
     text-align: center;
+}
+
+/* modal outer and inner styling for images open on click */
+.modal-outer{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    align-content: center;
+    justify-content: center;
+}
+
+.modal-outer.open{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-inner{
+    color:white;
 }
 
 /* footer */
