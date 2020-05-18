@@ -31,7 +31,8 @@ a:visited{
     display: grid;
     display: grid;
     grid-template-columns: 1fr minmax(500px, 4fr) 1fr;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    padding-top: 40px;
 }
 p{
     grid-column: 2/-2;
@@ -75,6 +76,10 @@ p{
 
 /* text with image layout */
 
+.textWithImage{
+    padding-top: 10px;
+}
+
 .imageUnderText{
     display: block;
     justify-self: center;
@@ -107,7 +112,7 @@ p{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: 400px;
+    /* grid-auto-rows: 400px; */
     grid-auto-flow: dense;
     padding: 0px 10px 0px 10px;
 }
@@ -116,10 +121,13 @@ p{
     display: grid;
     justify-items: center;
     align-items: center;
+}
+
+.galleryItem > img{
     transition: all 0.2s ease-in-out;
 }
 
-.galleryItem:hover{
+.galleryItem> img:hover{
     transform: translateY(-3px);
     box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
 }
@@ -127,10 +135,21 @@ p{
 .galleryHeaderPic{
     grid-column: 1/-1;
     grid-row: span 2;
+    padding-top: 30px;
+}
+
+.galleryHeaderPic__subtitle{
+    padding-top: 30px;
 }
 
 .galleryVertPic{
     grid-row: span 2;
+}
+
+.wrapper{
+    grid-column: 1/-1;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 
@@ -175,7 +194,7 @@ p{
 /* footer */
 footer{
     text-align: center;
-    padding: 0px 10px 10px 10px;
+    /* padding: 0px 10px 10px 10px; */
 }
 
 
